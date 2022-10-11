@@ -4,21 +4,39 @@
 
 
 //Gioco dei dadi
-//Generare un numero random da 1 a 6
-//sia per il giocatore 
-const playerNumber = Math.floor((Math.random() * 5) + 1).toFixed(0);
-console.log(playerNumber);
 
-//sia per il computer. 
-const computerNumber = Math.floor((Math.random() * 5) + 1).toFixed(0);
-console.log(computerNumber);
+const buttonEl = document.querySelector(".btn_start");
 
-//Stabilire il vincitore, in base a chi fa il punteggio più alto.
+buttonEl.addEventListener('click', function(){
 
-if (playerNumber > computerNumber){
-    //il giocatore ha vinto
-} else if (playerNumber = computerNumber){
-    //nessuno ha vinto parità
-} else{
-    //il computer ha vinto
-}
+    
+    
+    //Generare un numero random da 1 a 6
+    //sia per il giocatore 
+    const playerNumber = Math.floor((Math.random() * 5) + 1).toFixed(0);
+    console.log(playerNumber);
+    
+    //sia per il computer. 
+    const computerNumber = Math.floor((Math.random() * 5) + 1).toFixed(0);
+    console.log(computerNumber);
+    
+    //Stabilire il vincitore, in base a chi fa il punteggio più alto.
+    const playerEl = document.querySelector("ul li.player");
+    playerEl.innerHTML = playerNumber;
+
+    const computerEl = document.querySelector("ul li.computer");
+    computerEl.innerHTML = computerNumber;
+    
+    
+
+
+    if (playerNumber > computerNumber){
+        //il giocatore ha vinto
+        
+    } else if (playerNumber === computerNumber){
+        //nessuno ha vinto parità
+    } else{
+        //il computer ha vinto
+    }
+    
+})
