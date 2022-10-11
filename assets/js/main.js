@@ -1,7 +1,16 @@
 //Mail
 //Chiedi all’utente la sua email, controlla che sia nella lista di chi può accedere, stampa un messaggio appropriato sull’esito del controllo.
+const logEmail = ["marco@live", "mattia@live", "daniale@live.com", "patrick@gmail.it"]
+const playerEmail = prompt("Qual'è la tua email?");
 
-
+if (logEmail.includes(playerEmail)){
+    //accesso concesso
+    alert("accesso consentito")
+}else{
+    //accesso negato
+    alert("accesso negato")
+    window.location.reload();
+}
 
 //Gioco dei dadi
 

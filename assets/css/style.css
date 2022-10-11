@@ -4,10 +4,11 @@
     box-sizing: border-box;
 }
 
-body{
+.game_box{
     background-color: aqua;
+    padding: 5rem 2rem;
+    height: 400px;
 }
-
 ul{
     list-style: none;
 }
