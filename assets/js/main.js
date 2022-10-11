@@ -27,16 +27,19 @@ buttonEl.addEventListener('click', function(){
     const computerEl = document.querySelector("ul li.computer");
     computerEl.innerHTML = computerNumber;
     
-    
+    const winnerEl = document.querySelector("ul li.winner");
+
 
 
     if (playerNumber > computerNumber){
         //il giocatore ha vinto
-        
+        winnerEl.innerHTML = `complimenti hai vinto!`
     } else if (playerNumber === computerNumber){
         //nessuno ha vinto parità
+        winnerEl.innerHTML = `Parità`
     } else{
         //il computer ha vinto
+        winnerEl.innerHTML = `Mi dispiace ha vinto il computer`
     }
     
 })
